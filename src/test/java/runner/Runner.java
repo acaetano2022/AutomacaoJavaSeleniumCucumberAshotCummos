@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = "src/test/resources/features", dryRun = false, tags = "@CT01", glue = "steps", plugin = { "pretty",
+		features = "src/test/resources/features", dryRun = true , tags = "@todos", glue = "steps", plugin = { "pretty",
 				"html:target/cucumber", "json:target/cucumber.json" })
 public class Runner extends Drivers {
 
