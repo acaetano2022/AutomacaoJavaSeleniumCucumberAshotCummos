@@ -15,8 +15,24 @@ Funcionalidade: Simular cadastro
     E preencho telefone
     E preencho email
     E clico em avancar
-    E cadostro uma senha
-    E repito a senha correta
-    E clico em concordo
-    E clico em criar conta
-    Entao valido a conta crada com sucesso
+    Entao valido a conta criada com sucesso
+    
+    @CT02
+  Cenario: Validar erro cpf invalido
+    Dado que esteja no site de cadastro de usuario
+    Quando preencho um cpf invalido
+    E clico em avancar
+    Entao valido msg erro 
+    
+     @CT03
+  Cenario: Validar erro cpf já cadastrado
+    Dado que esteja no site de cadastro de usuario
+    Quando preencho um cpf ja cadastrado
+    E clico em avancar
+    Entao valido msg erro 
+    
+    
+     
+    
+    
+    
