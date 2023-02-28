@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import drivers.Drivers;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.Assert;
 
 public class Metodos extends Drivers {
@@ -42,7 +43,7 @@ public class Metodos extends Drivers {
 
 	public void abrirNavegador() {
 		String url = "https://app2.licitardigital.com.br/cadastro/";
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().window().maximize();
